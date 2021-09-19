@@ -1,5 +1,3 @@
-type
-  FileSignature = seq[tuple[offset: int, signature: string]]
 
 const
   # Shebang at beginning of file.
@@ -91,16 +89,10 @@ const
   SigPsd* = "\x38\x42\x50\x53"
 
   # Wav | 52 49 46 46 ?? ?? ?? ?? 57 41 56 45
-  SigWav*: FileSignature = @[
-    (0, "\x52\x49\x46\x46"), 
-    (8, "\x57\x41\x56\x45")
-  ]
+  SigWav* = "\x52\x49\x46\x46\x00\x00\x00\x00\x57\x41\x56\x45"
 
   # Avi | 52 49 46 46 ?? ?? ?? ?? 41 56 49 20
-  SigAvi*: FileSignature = @[
-    (0, "\x52\x49\x46\x46"),
-    (8, "\x41\x56\x49\x20")
-  ]
+  SigAvi* = "\x52\x49\x46\x46\x00\x00\x00\x00\x41\x56\x49\x20"
 
   # Mp3
   SigMp3v0* = "\xFF\xFB"
