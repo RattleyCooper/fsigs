@@ -1,6 +1,6 @@
 # fsigs
 
-Common file signatures as constants.
+Common file signatures as constants.  Used in [cuttle](https://github.com/RattleyCooper/cuttle)
 
 ## Example
 
