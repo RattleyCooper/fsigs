@@ -5,7 +5,7 @@ Common file signatures as constants.  Used in [cuttle](https://github.com/Rattle
 ## Example
 
 ```nim
-import fsigs
+import fsigs/fsigs
 
 const Pdf = SigPdf
 ```
