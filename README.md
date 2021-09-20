@@ -5,6 +5,8 @@ Library for validating files based on their file signature.  [File signatures ar
 ## Example
 
 ```nim
+# Procs in fsigs
+# FileSignatures in `signatures`
 import fsigs/[fsigs, signatures]
 
 
