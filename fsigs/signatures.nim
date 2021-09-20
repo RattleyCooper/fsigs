@@ -590,7 +590,6 @@ const
     SigChm,
     SigSdi,
     SigTape,
-    SigWav,
     SigAvi,
     SigIlbm,
     SigLbm,
@@ -603,5 +602,6 @@ const
     Sig8svIff,
     SigAsf,
     SigWma,
-    SigWmv
+    SigWmv,
+    SigWav
   ]

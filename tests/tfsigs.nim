@@ -78,9 +78,9 @@ suite "fsigs":
   let t4 = now()
   test "Signature":
     var f: File
-    if not f.open("tests/test_files/some.jpg", fmRead):
+    if not f.open("tests/test_files/some.wav", fmRead):
       raise newException(OSError, "File could not be opened.")
-    assert f.signature(AllFileSignatures) == fSigJpg1
+    assert f.signature(AllFileSignatures) == fSigWav
     f.close()
   echo "    " & $(now() - t4)
   echo ""

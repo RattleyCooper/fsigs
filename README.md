@@ -1,6 +1,6 @@
 # fsigs
 
-Library for validating files based on their file signature.  File signatures were taken from [this list](https://en.wikipedia.org/wiki/List_of_file_signatures), however I did not implement them all.  If a file signature is missing, create a pull request or open an issue explaining which file signature you'd like added.  If it's not on the list from wikipedia then provide as much detail about how you obtained the file signature.
+fsigs is a nim library made for validating files based on their file signature, very quickly(can check a file against 175+ file signatures in less than 1ms).  File signatures were taken from [this list](https://en.wikipedia.org/wiki/List_of_file_signatures), however I did not implement them all.  If a file signature is missing, create a pull request or open an issue explaining which file signature you'd like added.  If it's not on the list from wikipedia then provide as much detail about how you obtained the file signature.
 
 ## Signatures
 
