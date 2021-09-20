@@ -187,13 +187,13 @@ type
     ]
   ]
 
-proc `$`(fs: FileSignature): string =
+proc `$`*(fs: FileSignature): string =
   $fs.id
 
 proc fileSignature*(id: FileSignatures, signature: string, offset: int = 0): FileSignature =
   ## Create new file signatures.
   #
-  
+
   result = (
     id,
     @[(offset, signature)]
@@ -261,10 +261,10 @@ proc matchesAny*(f: File, sigs: seq[FileSignature]): bool =
       result = true
       break
 
-proc `==`(fss: FileSignatures, fs: FileSignature): bool =
+proc `==`*(fss: FileSignatures, fs: FileSignature): bool =
   fss == fs.id
 
-proc `==`(fs: FileSignature, fss: FileSignatures): bool =
+proc `==`*(fs: FileSignature, fss: FileSignatures): bool =
   fs.id == fss
 
 proc signature*(f: File, sigs: seq[FileSignature]): FileSignatures =
