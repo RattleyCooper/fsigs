@@ -45,6 +45,17 @@ suite "fsigs":
       (false, SigJpeg3)
     ]
 
+    const fileSigs = @[
+      SigJpg0,
+      SigJpg1,
+      SigJpg2,
+      SigJpg3
+    ]
+
+    const nSigs = @[
+      SigPng, SigTarGz, SigMkv
+    ]
+
     var f: File
     if not f.open("test_files/test5.jpg", fmRead):
       raise newException(OSError, "File could not be opened.")
@@ -56,5 +67,8 @@ suite "fsigs":
 
     for ft in fileTypes:
       assert f.matches(ft[1]) == ft[0]
+
+    assert f.matchesAny(fileSigs)
+    assert f.matchesAny(nSigs) == false
 
     f.close()

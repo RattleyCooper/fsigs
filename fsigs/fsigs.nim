@@ -64,3 +64,13 @@ proc fileMatches*(filePath: string, fs: FileSignature): bool =
   
   result = f.matches(fs)
   f.close()
+
+proc matchesAny*(f: File, sigs: seq[FileSignature]): bool =
+  ## Check if file matches any of the given file signatures.
+  #
+  
+  result = false
+  for sig in sigs:
+    if f.matches(sig): 
+      result = true
+      break
