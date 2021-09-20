@@ -1,3 +1,5 @@
 test_files*
 tests/tfsigs
 fsigs/fsigs
+*.exe
+*.py
