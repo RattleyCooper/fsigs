@@ -5,11 +5,11 @@ Library for validating files based on their file signature.  File signatures wer
 ## Example
 
 ```nim
-# Procs in fsigs
+# Procs in `fsigs`
 # FileSignatures in `signatures`
 import fsigs/[fsigs, signatures]
 
-
+const testSig1 = "\x52\x49\x46\x46\x01\x02\x03\x04\x57\x41\x56\x45"
 const fileSigs = @[
   SigJpeg0,
   SigJpeg1,
@@ -26,6 +26,8 @@ for fileSig in fileSigs:
     echo fileSig.name
 
 echo f.matchesAny(fileSigs)
+
+echo testSig1.matches(SigWav)
 
 f.close()
 
