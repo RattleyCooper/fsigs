@@ -305,6 +305,9 @@ const
   # Lua bytecode (luac)
   SigLuac* = fileSignature("SigLuac", "\x1b\x4c\x75\x61")
 
+  # Python bytecode (pyc) 61 0d 0d 0a 00 00 00 00
+  SigPyc* = fileSignature("SigPyc", "\x61\x0d\x0d\x0a\x00\x00\x00\x00")
+
   # macOS file alias (alias)
   SigAlias* = fileSignature("SigAlias", "\x62\x6f\x6f\x6b\x00\x00\x00\x00\x6d\x61\x72\x6b\x00\x00\x00\x00")
   
