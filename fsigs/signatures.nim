@@ -8,18 +8,18 @@ proc fileSignature(name: string, signature: string, offset: int = 0): tuple[name
 
 const
   # Shebang at beginning of file.
-  SigShebang* = fileSignature("shebang", "\x23\x21")
+  SigShebang* = fileSignature("SigShebang", "\x23\x21")
 
   # Pcap files (pcap)
-  SigPcapLe* = fileSignature("pcap - le", "\xD4\xC3\xB2\xA1")
-  SigPcapBe* = fileSignature("pcap - be", "\xA1\xB2\xC3\xD4")
+  SigPcapLe* = fileSignature("SigPcapLe", "\xD4\xC3\xB2\xA1")
+  SigPcapBe* = fileSignature("SigPcapBe", "\xA1\xB2\xC3\xD4")
   
   # Pcap w/ Nanosecond resolution (pcap)
-  SigNsPcapLe* = fileSignature("pcap - ns le", "\x4D\x3C\xB2\xA1")
-  SigNsPcapBe* = fileSignature("pcap - ns be", "\xA1\xB2\x3C\x4D")
+  SigNsPcapLe* = fileSignature("SigNsPcapLe", "\x4D\x3C\xB2\xA1")
+  SigNsPcapBe* = fileSignature("SigNsPcapBe", "\xA1\xB2\x3C\x4D")
   
   # Pcap next gen (pcapng)
-  SigPcapNextGeneration* = fileSignature("pcap - ng", "\x0A\x0D\x0D\x0A")
+  SigPcapNextGeneration* = fileSignature("SigPcapNextGeneration", "\x0A\x0D\x0D\x0A")
 
   # RedHat Package Manager (rpm) package
   SigRpm* = fileSignature("SigRpm", "\xED\xAB\xEE\xDB")
