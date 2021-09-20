@@ -20,21 +20,21 @@ suite "fsigs":
     assert testSig4.matches(SigWav) == false
 
   test "File Matching":
-    assert fileMatches("test_files/test5.jpg", SigJpeg1)
+    assert fileMatches("tests/test_files/test5.jpg", SigJpeg1)
     assert fileMatches(
-      "test_files/cantrbry.tar.gz", 
+      "tests/test_files/cantrbry.tar.gz", 
       SigTarGz
     )
     assert fileMatches(
-      "test_files/cantrbry.tar.xz", 
+      "tests/test_files/cantrbry.tar.xz", 
       SigTarXz
     )
     assert fileMatches(
-      "test_files/test6.png",
+      "tests/test_files/test6.png",
       SigPng
     )
     assert fileMatches(
-      "test_files/test6.7z",
+      "tests/test_files/test6.7z",
       Sig7z
     )
 
@@ -57,7 +57,7 @@ suite "fsigs":
     ]
 
     var f: File
-    if not f.open("test_files/test5.jpg", fmRead):
+    if not f.open("tests/test_files/test5.jpg", fmRead):
       raise newException(OSError, "File could not be opened.")
     
     assert f.matches(SigJpeg0) == false
